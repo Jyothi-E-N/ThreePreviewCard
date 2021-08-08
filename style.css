@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --paragraphs-color: hsla(0, 0%, 100%, 0.75);
+  --bakgrnd-head-buttons-color: hsl(0, 0%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+#main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cards {
+  max-width: 1000px;
+  display: flex;
+}
+
+.card {
+  flex: 1;
+}
+
+.card1 {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.card2 {
+  background-color: var(--dark-cyan);
+}
+.card3 {
+  background-color: var(--very-dark-cyan);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.block {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.heading h1 {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--bakgrnd-head-buttons-color);
+}
+
+.para p {
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.4rem;
+  color: var(--paragraphs-color);
+  letter-spacing: 0.8px;
+}
+
+.learnMore {
+  font-size: 15px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  transition: all 300ms ease-in;
+}
+
+.button1 button {
+  color: var(--bright-orange);
+}
+
+.button2 button {
+  color: var(--dark-cyan);
+}
+
+.button3 button {
+  color: var(--very-dark-cyan);
+}
+.learnMore:hover {
+  cursor: pointer;
+  border: 3px solid var(--bakgrnd-head-buttons-color);
+  color: var(--bakgrnd-head-buttons-color);
+}
+
+.button1 button:hover {
+  background-color: var(--bright-orange);
+}
+
+.button2 button:hover {
+  background-color: var(--dark-cyan);
+}
+
+.button3 button:hover {
+  background-color: var(--very-dark-cyan);
+}
+
+@media (max-width: 800px){
+    #main{
+        height: 325vh;
+    }
+
+    #cards{
+        flex-direction: column;
+        width:90%;
+    }
+
+    .para p{
+        letter-spacing: 0.3px;
+    }
+
+    .learnMore{
+        font-weight: 500;
+    }
+
+    .card1{
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0;
+    }
+
+    .card3{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 5px;
+    }
+}
