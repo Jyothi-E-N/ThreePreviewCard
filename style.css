@@ -117,7 +117,7 @@ body {
 
 @media (max-width: 800px){
     #main{
-        height: 325vh;
+        height: 300vh;
     }
 
     #cards{
